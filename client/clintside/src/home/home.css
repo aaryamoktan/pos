@@ -1,0 +1,186 @@
+@media screen and (min-width:1008px) {
+    
+
+.home{
+    position:relative;
+    width:100%;
+    height:100vh;
+    display:flex;
+    gap:1rem;
+    color:rgb(39, 59, 74)
+}
+.homeRight2{
+    position:relative;
+    width:100%;
+    height:100%;
+    border-radius: 0px;
+    background:rgb(221, 226, 233)
+}
+.homeRight2>.search{
+    position:relative;
+    display:flex;
+    top: 3px;
+    gap:4rem;
+    margin-left: 300px;
+}
+.homeRight2>.search>.input{
+    position:relative;
+    width:70%;
+}
+.homeRight2>.search>.input>input{
+    position:relative;
+    width:100%;
+    height:5vh;
+    border-radius: 10px;
+}
+.homeRight2>.search>.notification{
+    position:relative;
+    font-size: 30px;
+    top:10px;
+    left:-40px
+}
+.homeRight2>h1{
+    position:relative;
+    margin-top: -5px;
+    margin-left: 42%;
+    font-weight: 200;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;  
+}
+.homeRight2>.catgorylist{
+    position: relative;
+    width:100%;
+    height:auto;
+    display:flex;
+    justify-content: center;
+    cursor: pointer;
+    gap:1rem;
+}
+.homeRight2>.catgorylist>.c1{
+    position:relative;
+    width:10%;
+    height:3vh;
+    background:white;
+    border-radius: 10px;
+    text-align: center;
+}
+.homeRight2>.catgorylist>.c1>span{
+    position:relative;
+    top: -15px;
+}
+.homeRight2>.food{
+    position: relative;
+    width:100%;
+    height: 82vh;
+    overflow-y: auto;
+    display:flex;
+    top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+   
+}
+.homeRight2>.food>.food1{
+    position:relative;
+    width:20%;
+    margin-left: 20px;
+    border-radius: 30px;
+    top: -0px;
+    height:38vh;
+    overflow: hidden;
+    background:rgb(164, 162, 162);    
+    box-shadow: 1px 1px 12px rgb(183, 182, 182);
+}
+
+.homeRight2>.food>.food1>.food23{
+    position:relative;
+    width:100%;
+    height:100%;
+    
+}
+.homeRight2>.food>.food1>.food23>.img{
+    position:relative;
+    width:100%;
+    height:70%;
+}
+.homeRight2>.food>.food1>.food23>.p{
+    position:absolute;
+    width:100%;
+    z-index: 2;
+    font-size: 20px;
+    margin-top: 1%;
+    
+    
+}
+.homeRight2>.food>.food1>.food23>.p>span{
+    position:absolute;
+    z-index: 1;
+    width:100%;
+    text-align: center;
+    backdrop-filter: blur(100px);
+    border-radius: 10px;
+    background:rgb(164, 162, 162);
+   color:white;
+   font-size: 30px;
+}
+.homeRight2>.food>.food1>.food23>.img>img{
+    position:relative;
+    width:100%;
+    border-radius: 10px;
+    height:100%
+}
+
+.homeRight2>.food>.food1>.s2{
+    position:relative;
+    top:-39%;
+}.homeRight2>.food>.food1>h3{
+    position:relative;
+    top:-32%;
+    font-weight: 100;
+    color:white
+}
+.homeRight2>.food>.food1>h4{
+    position:relative;
+    top:-62%;
+    color:white;
+    left:60%;
+    font-size: 20px;
+}
+.homeRight2>.food>.food1>input{
+    position:relative;
+    top:-70%;
+    left:60%;
+    width:30%;
+}
+.homeRight2>.food>.food1>.price{
+    position:absolute;
+    top:90%;
+    width:40px;
+    text-align: center;
+    left:20px;
+    font-size: 20px;
+    box-shadow: 1px 1px 10px black;;
+    color:rgb(253, 255, 253);
+    border-radius: 10px;
+    backdrop-filter: blur(100px);
+    background:rgb(157, 157, 157);
+    box-shadow: 0px 0px 12px rgb(99, 98, 98);
+}
+.homeRight2>.food>.food1>.btt{
+    position:absolute;
+    top:89%;
+    width:auto;
+    left:125px;
+    height:3vh;
+    cursor: pointer;
+    font-size: 20px;
+    color:black;
+    z-index:2;
+    background: rgb(157, 157, 157);
+    box-shadow: 0px 0px 12px rgb(99, 98, 98);
+    border-radius: 20px;
+    color:white;
+    border:none;
+}
+}

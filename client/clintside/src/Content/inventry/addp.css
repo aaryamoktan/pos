@@ -1,0 +1,86 @@
+.addpContainer{
+    position:absolute;
+    width:44%;
+    height:60vh;
+    background:white;
+    z-index:2;
+    margin-top: 10%;
+    border-radius: 10px;
+    margin-left: 30%;
+    color:rgb(39, 59, 74)
+}
+.addpContainer>.add{
+    position:relative;
+    width:35%;
+    height:5vh;
+    margin-left: 30px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    border:2px solid rgb(247, 126, 34);
+}
+.addpContainer>.add>h3{
+    margin-top: 8px;
+    font-size: 20px;
+    color:rgb(247, 126, 34);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.addpContainer>form{
+    position:relative;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.addpContainer>form>label{
+    position:relative;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.addpContainer>form>input{
+    position:relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width:70%;
+    border:none;
+    background:#ebeff6;
+    height:4vh;
+}
+.addpContainer>form>select{
+    position:relative;
+    background:#ebeff6;
+    height:5vh;
+    width:70%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border:none;
+}
+.addpContainer>form>input{
+    position:relative;
+    line-height: 50%;
+}
+.addpContainer>form>.inputfile{
+    position:relative;
+    background:none;
+}
+.addpContainer>form>.save{
+    position:relative;
+    width:15%;
+    height:4vh;
+    margin-top: 20px;
+    margin-left: 60%;
+    border-radius: 20px;
+    border:none;
+    background:rgb(25, 220, 25);
+    color:white;
+    font-weight: 800;  
+}
+.addpContainer>form>.save1{
+    position:relative;
+    width:15%;
+    height:4vh;
+    margin-left: 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border:none;
+    background:rgb(242, 52, 52);
+    color:white;
+    font-weight: 800;
+}

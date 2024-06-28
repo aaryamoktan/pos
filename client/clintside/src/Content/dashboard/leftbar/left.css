@@ -1,0 +1,63 @@
+
+.homeLeft{
+    position:relative;
+    width:20%;
+    color:rgb(39, 59, 74);
+    
+}
+.homeLeft>.LOGO
+{
+    position:relative;
+    top: 20px;
+    margin-left:40px
+}
+.homeLeft>.ul{
+    position:relative;
+    top: 20%;
+}
+.homeLeft>.ul>ul{
+    position:relative;
+    display:flex;;
+    flex-direction: column;
+    justify-content: center;
+    gap:1rem;
+    list-style: none;
+}
+.homeLeft>.ul>ul>li{
+    position:relative;
+    height:4vh;
+    border-radius: 1px;
+    line-height: 50%;
+    align-items: center;
+
+}
+.homeLeft>.ul>ul>li:hover{
+    background:rgb(242, 222, 161);
+    cursor: pointer;
+}
+.homeLeft>.ul>ul>li>b{
+    font-weight: 400;
+    position:relative;
+    top: 5px;
+}
+.homeLeft>.ul>ul>li>b>a{
+    position:relative;
+    text-decoration: none;
+    color:black
+}
+.homeLeft>.logout{
+    position:relative;
+    top:40%;
+    margin-left:30%;
+    border:none;
+}
+.homeLeft>.logout>button{
+    position:relative;
+    border:none;
+    background:none;
+}
+.homeLeft>.logout>button:hover{
+    position: relative;
+    background:rgb(187, 135, 135);
+    cursor: pointer;
+}

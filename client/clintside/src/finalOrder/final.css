@@ -1,0 +1,31 @@
+.finalContainer{
+    position:absolute;
+    width: 150%;
+    height:auto;
+    background:rgb(174, 174, 174);
+    text-align: start;
+    z-index:2;
+    top: 30%;
+    box-shadow: 1px 1px 12px white;
+    border-radius: 10px;
+    left:-300%
+}
+.cass{
+    position:relative;
+    width:20%;
+    border: 2px solid rgb(52, 51, 51);
+    border-radius: 10px;
+    text-align: center;
+}
+.card{
+    border: 2px solid rgb(52, 51, 51);
+    border-radius: 10px;
+    margin-left: 30px;
+    text-align: center;
+}
+.qr{
+    border: 2px solid rgb(52, 51, 51);
+    border-radius: 10px;
+    width:20%;
+    text-align: center;
+}

@@ -1,0 +1,62 @@
+.selectContainer{
+    position:relative;
+    width:20%;
+    margin-left: 0px;
+    height:100vh;
+    border-radius: 0px;
+    color:rgb(39, 59, 74);
+    background:rgb(221, 226, 233);
+}
+.selectContainer>.selectinner{
+    position:relative;
+    height:90%;
+    overflow-y: auto;
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+}
+.cartinner{
+    position:relative;
+    width:80%;
+    height:25vh;
+    background:white
+}
+.cartinner>img{
+    position:relative;
+    width:70%;
+    margin-top: 10px;
+    height:55%;
+}
+.cartinner>.productname{
+    position:relative;
+    font-size: 20px;
+    top:5px
+}
+.cartinner>.price{
+    position:relative;
+    font-size: 20px;
+    top:5px
+}
+.cartinner>button{
+    position:relative;
+    width:60%;
+    margin-left: 2px;
+    border-radius: 10px;
+    top:5px
+}
+.item{
+    position: absolute;
+    top:0;
+    width:10%;
+    height:20vh;
+    left:80%;
+    top:30%;
+   
+}
+.item>input{
+    position:relative;
+    margin-top: 2px;
+    text-align: center;
+    margin-bottom: 2px;
+    width:110%;
+}

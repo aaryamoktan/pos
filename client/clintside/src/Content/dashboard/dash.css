@@ -1,0 +1,130 @@
+.Dassboard{
+    position:relative;
+    width:100%;
+    height:auto;
+    display:flex;
+    gap:3rem;
+    color:rgb(39, 59, 74)
+}
+.dassboardinner{
+    position:relative;
+    width:80%;
+    margin-top: 10px;
+    margin-right:1% ;
+    height:auto;
+    background:rgb(221, 226, 233);
+    border-radius: 20px;
+}
+.dassboardinner>.dashin{
+    position:relative;  
+}
+.dassboardinner>.dashin>input{
+    position:relative;
+    margin-top: 10px;
+    width:35%;
+    margin-left: 40px;
+    border-radius: 20px;
+    height:4vh;
+}
+.dassboardinner>.dashinner1{
+    position:relative;
+    width:100%;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    gap:3rem;
+    height:auto;
+}
+.dassboardinner>.dashinner1>.dashinner11{
+    position:relative;
+    height:15vh;
+    width:20%;
+    background:white;
+    border-radius: 10px;
+}
+.uparr{
+    background:rgb(160, 216, 160);
+}
+.uparr2{
+    background:rgb(110, 110, 231);
+}
+.dassboardinner>.dashinner2{
+    position:relative;
+    width:100%;
+    height:auto;
+    display:flex;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: center;
+    gap:2rem;
+}
+.dassboardinner>.dashinner2>.dashinner21{
+    position:relative;
+    width:43.5%;
+    margin-left: -3%;
+    border-radius: 20px;
+    height:40vh;
+    background:white
+}
+.dassboardinner>.dashinner2>.dashinner22{
+    position:relative;
+    width:20%;
+    height:40vh;
+    left: 2%;;
+    border-radius: 20px;
+    background:white
+}
+.dassboardinner>.dashinner2>.dashinner23{
+    position:relative;
+    width:20%;
+    left:3%;
+    height:40vh;
+   display:flex;
+   gap:1rem;
+   flex-direction: column;
+}
+.dassboardinner>.dashinner2>.dashinner23>.das24
+{
+    position:relative;
+    width:100%;
+    height: 49%;
+    background:white;
+    border-radius: 20px;
+}
+.dashinner3{
+    position:relative;
+    width:90%;
+    margin-left: 5%;
+    height:25vh;
+    margin-top: -70px;
+    border-radius: 20px;
+    background:white;
+    margin-bottom: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+}
+.dashinner3>h1{
+    position:relative;
+    top:10px;
+    font-family: 'Courier New', Courier, monospace;
+    left:20px;
+}
+.dashinner3>.dash31{
+
+    position:relative;
+    width:30%;
+    margin-top: 30px;
+    border-radius: 20px;
+    height:12vh;
+    border:2px solid rgb(250, 201, 161);
+   
+}
+h1{
+    position:relative;
+    top:1%;
+    z-index: 1;
+    margin-left:80px
+}

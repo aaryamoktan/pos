@@ -1,0 +1,95 @@
+.updateContainer{
+    position:relative;
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:rgb(221, 220, 220);
+}
+.updateInt{
+    position:relative;
+    width:44%;
+    height:60vh;
+    background:rgb(164, 164, 164);
+    box-shadow: 0px 0px 20px black;
+    z-index:1;
+    border-radius: 10px;
+   
+    color:rgb(39, 59, 74)
+}
+.updateInt>.add{
+    position:relative;
+    width:35%;
+    height:5vh;
+    margin-left: 30px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    border:2px solid rgb(247, 126, 34);
+}
+.updateInt>.add>h3{
+    margin-top: 8px;
+    font-size: 20px;
+    color:rgb(247, 126, 34);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.updateInt>form{
+    position:relative;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.updateInt>form>label{
+    position:relative;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.updateInt>form>input{
+    position:relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width:70%;
+    border:none;
+    background:#ebeff6;
+    height:4vh;
+}
+.updateInt>form>select{
+    position:relative;
+    background:#ebeff6;
+    height:5vh;
+    width:70%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border:none;
+}
+.updateInt>form>input{
+    position:relative;
+    line-height: 50%;
+}
+.updateInt>form>.inputfile{
+    position:relative;
+    background:none;
+}
+.updateInt>form>.save{
+    position:relative;
+    width:15%;
+    height:4vh;
+    margin-top: 20px;
+    margin-left: 60%;
+    border-radius: 20px;
+    border:none;
+    background:rgb(25, 220, 25);
+    color:white;
+    font-weight: 800;  
+}
+.updateInt>form>.save1{
+    position:relative;
+    width:15%;
+    height:4vh;
+    margin-left: 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border:none;
+    background:rgb(242, 52, 52);
+    color:white;
+    font-weight: 800;
+}
