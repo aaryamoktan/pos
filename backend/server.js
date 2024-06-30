@@ -3,6 +3,7 @@ const cors = require("cors");
 const orderModal=  require("./order")
 const usermodal  =require("./modal")
 const userdetails  = require("./userDetail");
+const dotenv = require("dotenv")
 const mongoose = require("mongoose")
 const router = require("./route")
 const multer = require("multer")
@@ -11,8 +12,9 @@ const app = express();
 const upload = multer({ dest: 'uploads/' })
 app.use(cors());
 app.use(express.json())
+dotenv.config();
 app.use("/uploads",express.static('uploads'))
-mongoose.connect("mongodb+srv://aaryanmoktan2000:apple@cluster0.bdlf52l.mongodb.net/mern");
+const name = mongoose.connect(process.env.URL);
 app.use("/",router);
 app.get("/getdata",(req,res)=>
 {
@@ -20,6 +22,7 @@ app.get("/getdata",(req,res)=>
     .then(user=>res.json(user))
     .catch(err=>res.json(err))
 });
+
 app.post("/checkout",async(req,res)=>
 {
     const product = req.body;
@@ -134,6 +137,8 @@ app.put("/update/:id",async(req,res)=>
         console.log(err)
     }
 })
-app.listen(4000,(req,res)=>
+const PORT = process.env.PORT
+app.listen(PORT,(req,res)=>
 {
+    console.log(`post number ${PORT}`)
 })
