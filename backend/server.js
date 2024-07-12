@@ -15,6 +15,9 @@ app.use(express.json())
 dotenv.config();
 app.use("/uploads",express.static('uploads'))
 const name = mongoose.connect(process.env.URL);
+if(name){
+    console.log("connected")
+}
 app.use("/",router);
 app.get("/getdata",(req,res)=>
 {

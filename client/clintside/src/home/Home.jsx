@@ -59,7 +59,8 @@ return (
             <div className='c1' onClick={() => {
               filteritems(ele)
             }}>
-              <br /><span>{ele}</span></div>
+              <br /><span>{ele}
+              </span></div>
             </>
           )
          })}  
