@@ -4,8 +4,7 @@ const userSchema = new mongoose.Schema({
     ChooseCategory:String,
     Price:Number,
     qunty:Number,
-    image:String,
-    
+    image:String,  
 })
 const usermodal = mongoose.model("inventryfooditems",userSchema)
 module.exports = usermodal;

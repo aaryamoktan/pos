@@ -1,15 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import "./setting.css"
-import Leftbar from '../dashboard/leftbar/Leftbar'
-import { useParams } from 'react-router-dom'
-import axios from 'axios'
-const Setting = () => 
-  {
+import React from 'react'
+import Leftbar from '../../dashboard/leftbar/Leftbar'
+const Generalsetting = () => {
   return (
-    <> 
-        <div className='settingContiner'>
-            <Leftbar/>
-            <div className='rightsetting'>
+    <div className='settingContiner'>
+      <Leftbar/>
+      <div className='rightsetting'>
               <h1>setting</h1>
               <div className='ulSetting'>
               <ul>
@@ -20,9 +15,8 @@ const Setting = () =>
               </ul>
               </div>
             </div>
-           
-        </div>
-    </>
+    </div>
   )
 }
-export default Setting
+
+export default Generalsetting

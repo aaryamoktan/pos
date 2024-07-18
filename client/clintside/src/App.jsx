@@ -1,6 +1,12 @@
 import Admin from './Content/admin/Admin';
 import Home from './home/Home';
 import Layout from './Layout';
+import PPlogin from './Content/Setting/innerSetting/PPlogin';
+import PPmoreinfo from './Content/Setting/innerSetting/PPmoreinfo';
+import Generalsetting from './Content/Setting/innerSetting/Generalsetting';
+import Tax from './Content/Setting/innerSetting/Tax';
+import Register from './Content/Setting/innerSetting/Register';
+import Profileinfo from './Content/Setting/innerSetting/Profileinfo';
 import Login from './Content/login/Login';
 import Dashboard from './Content/dashboard/Dashboard';
 import Setting from './Content/Setting/Setting';
@@ -11,6 +17,9 @@ import Int from './Content/inventry/Int';
 import { store } from './redux/store'
 import { Provider } from 'react-redux'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import TotalREvenue from './Content/total sell/TotalREvenue';
+import TotalSell from './Content/total sell/TotalSell';
+import TotalOrder from './Content/total sell/TotalOrder';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -38,6 +47,42 @@ const router = createBrowserRouter([
     {
       path: "/admin/setting",
       element: <Setting />
+    },
+    {
+      path: "/admin/setting/profile",
+      element: <Profileinfo />
+    },
+    {
+      path: "/admin/setting/profile/more",
+      element: <PPmoreinfo />
+    },
+    {
+      path: "/admin/setting/profile/login",
+      element: <PPlogin />
+    },
+    {
+      path: "/admin/setting/generalsetting",
+      element: <Generalsetting />
+    },
+    {
+      path: "/admin/setting/tax",
+      element: <Tax />
+    },
+    {
+      path: "/admin/setting/register",
+      element: <Register />
+    },
+    {
+      path: "/admin/dashboard/totalorder",
+      element: <TotalOrder />
+    },
+    {
+      path: "/admin/dashboard/totalsell",
+      element: <TotalSell />
+    },
+    {
+      path: "/admin/dashboard/totalrevenue",
+      element: <TotalREvenue />
     },
     {
       path: "/login",

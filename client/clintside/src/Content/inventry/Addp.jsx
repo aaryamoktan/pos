@@ -8,8 +8,6 @@ const Addp = ({onClose}) => {
     const [Price, setprice] = useState('');
     const [image,setimage] = useState('');
     const nevigate = useNavigate()
-  
-    
     const submit= (e)=>
     {
         var qty = 0
@@ -28,8 +26,7 @@ const Addp = ({onClose}) => {
        {
         alert("insert data sucesufully")
        window.location.reload()
-       }
-       
+       }   
     }
   return (
     <>
@@ -45,15 +42,10 @@ const Addp = ({onClose}) => {
                 }} />
                 <br/>
                 <label>Choose Category</label><br/>
-                <select value={ChooseCategory} required onChange={(e)=>
+                <input type="text" value={ChooseCategory} required onChange={(e)=>
                 {
                     setcatergory(e.target.value)
-                }} >
-                     <option value="none">Select</option>
-                    <option value="Burger">Burger</option>
-                    <option value="Pizza">pizza</option>
-                    <option value="Soft Drink">Soft Drink</option>
-                </select>
+                }} />
                 <br/>
                 <label className='inputfile' >Price $</label><br/>
                 <input value={Price} type="number" required onChange={(e)=>

@@ -1,0 +1,8 @@
+.revenueContainer{
+    position:relative;
+    width:100%;
+    height:auto;
+    display:flex;
+    gap:3rem;
+    color:rgb(39, 59, 74)
+}

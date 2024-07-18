@@ -1,0 +1,159 @@
+.settingContiner{
+    position:relative;
+    width:100%;
+    height:auto;
+    display:flex;
+    gap:3rem;
+    color:rgb(39, 59, 74)
+}
+.rightsetting{
+    position:relative;
+    width:77%;
+    height:100vh;
+    background: rgb(222, 223, 223);
+}
+.settingContiner>.rightsetting>h1{
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.rightsetting>.ulSetting
+{
+    position:relative;
+    margin-left: 30px;
+    border-radius: 10px;
+    width:25%;
+    background-color: white;
+    height:70vh;
+}
+.rightsetting>.ulSetting>ul{
+    position:relative;
+    margin-top:20px;
+    margin-left: 10px;
+    list-style: none;
+}
+.rightsetting>.ulSetting>ul>li{
+    position:relative;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 20px;
+}
+.profile1stContainer{
+    position:absolute;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1px;
+    width:20%;
+    left:45%;
+    top:16%;
+    background: rgb(222, 223, 223);;
+ 
+}
+.profile2ndContainer{
+    position:absolute;
+    width:30%;
+    left:65.5%;
+    border-radius: 10px;
+    top:16%;
+    height:60vh;
+    background:white;
+    border-radius: 10px;  
+}
+.pp1{
+    position:relative;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:49%;
+    background:white;
+}
+.pp1>img{
+
+    position:relative;
+    margin-top: 10%;
+    width:40%;
+    border-radius: 50%;
+}
+.pp2{
+    position:relative;
+    width:100%;
+    height:26vh;
+    display:flex;
+    flex-direction: column;
+   
+    margin-top: 2px;
+    background:white;
+}
+.pp2>ul{
+    position:relative;
+    list-style: none;
+    margin-left:50px;
+    
+}
+.pp2>ul>.l1{
+    position: relative;
+    font-size: 17px;
+    color:rgb(163, 160, 160)
+}
+.pp2>ul>.l2{
+    position: relative;
+    margin-top: 10px;
+    font-style: bold;
+   
+}
+.pp2>ul>.l3{
+    position: relative;
+    margin-top: 10px;
+   
+    color:rgb(163, 160, 160)
+} 
+.pp2>ul>.l4{
+    position: relative;
+    margin-top: 70px;
+    color:rgb(255, 0, 0);
+    font-style: bold;
+   
+}
+.profile2ndContainer>.profileinside>.h1fororofile{
+    position: relative;
+    font-size: 25px;
+    margin-left: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.profile2ndContainer>.profileinside>.div1{
+    position:relative;
+    width:100%;
+    margin-left: 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:50px
+}
+.profile2ndContainer>.profileinside>.div2{
+    position:relative;
+    width:100%;
+    margin-top: 10px;
+    margin-left: 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:50px
+}
+.div3{
+    position:relative;
+    width:100%;
+}
+.div3>button{
+    position:relative;
+    width:50%;
+    margin-top: 70px;
+    height:4vh;
+    border-radius: 10px;
+    border:none;
+    background:rgb(255, 140, 0);
+    color:white;
+    margin-left:110px;
+}

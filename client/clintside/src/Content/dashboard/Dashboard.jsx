@@ -51,20 +51,20 @@ total()
             <MdAddCard style={{fontSize:"40px",margin:"10px",color:"green"}}/>
               <span style={{position:"absolute",fontSize:"20px",top:"20px",marginLeft:"20px"}}>Total Order</span>
               <p style={{position:"absolute",fontSize:"27px",top:"40px",left:"30px"}}>{length}</p>
-              <div className='uparr' style={{position:"absolute",width:"50px",top:"55px",height:"50px",left:"180px",borderRadius:"25px"}}><MdArrowOutward style={{fontSize:"50px",color:"green",fontWeight:"100"}}/></div>
+              <div className='uparr' style={{position:"absolute",width:"50px",top:"55px",height:"50px",left:"180px",borderRadius:"25px"}}><a href="/admin/dashboard/totalorder"><MdArrowOutward style={{fontSize:"50px",color:"green",fontWeight:"100"}}/></a></div>
             </div>
             <div className='dashinner11'>
             <LiaSellcast style={{fontSize:"40px",margin:"10px",color:"lightgreen"}}/>
               <span style={{position:"absolute",fontSize:"20px",top:"20px",marginLeft:"20px"}}>Total Sell</span>
               <p style={{position:"absolute",fontSize:"27px",top:"40px",left:"30px"}}>{totalqu}</p>
-              <div className='uparr' style={{position:"absolute",width:"50px",top:"55px",height:"50px",left:"180px",borderRadius:"25px",background:"lightgreen"}}><MdArrowOutward style={{fontSize:"50px",color:"green",fontWeight:"100"}}/></div>
+              <div className='uparr' style={{position:"absolute",width:"50px",top:"55px",height:"50px",left:"180px",borderRadius:"25px",background:"lightgreen"}}><a href="/admin/dashboard/totalsell"><MdArrowOutward style={{fontSize:"50px",color:"green",fontWeight:"100"}}/></a></div>
             
             </div>
             <div className='dashinner11'>
             <LuCircleDollarSign  style={{fontSize:"40px",margin:"10px",color:"blue"}}/>
               <span style={{position:"absolute",fontSize:"20px",top:"20px",marginLeft:"20px"}}>Total Revenue</span>
               <p style={{position:"absolute",fontSize:"27px",top:"40px",left:"30px"}}>$ {totalPrice}</p>
-              <div className='uparr2' style={{position:"absolute",width:"50px",top:"55px",height:"50px",left:"180px",borderRadius:"25px"}}><MdArrowOutward style={{fontSize:"50px",color:"blue",fontWeight:"100"}}/></div>
+              <div className='uparr2' style={{position:"absolute",width:"50px",top:"55px",height:"50px",left:"180px",borderRadius:"25px"}}><a href="/admin/dashboard/totalrevenue"><MdArrowOutward style={{fontSize:"50px",color:"blue",fontWeight:"100"}}/></a></div>
             </div>
             <div className='dashinner11'></div>
           </div>
