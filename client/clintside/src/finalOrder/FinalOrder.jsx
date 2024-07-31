@@ -3,9 +3,12 @@ import "./final.css"
 import { TbCashBanknote } from "react-icons/tb";
 import { FaRegCreditCard } from "react-icons/fa";
 import { FaQrcode } from "react-icons/fa";
+import PrintInvoinve from './PrintInvoinve';
 const FinalOrder = ({carts}) => {
     const [totalPrice,setTotalPrice] = useState(0)
     const [place,setPlace] = useState(5)
+    const [print,setPrint] = useState(false)
+  
     const total = ()=>
     {
       let totalPrice = 0;
@@ -61,9 +64,9 @@ QR Code
     </div>
     <button style={{background:"none",marginLeft:"150px",marginBottom:"10px",cursor:"pointer"}} onClick={()=>
     {
-     alert("payment has done sucesfully ")
-     window.location.reload()
+    setPrint(true)
     }}>Payment</button>
+    {print &&<PrintInvoinve carts={carts}/>}
     </div>  
    </>
   )

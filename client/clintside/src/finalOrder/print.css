@@ -1,0 +1,37 @@
+.printContainer{
+    position: absolute;
+    z-index: 1;
+    width:100%;
+    top:-100px;
+    height:auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background :white;
+    box-shadow: 1px 1px 10px black;
+   
+}
+.casher{
+    position:relative;
+    display: flex;
+    justify-content: space-between;
+}
+table {
+    width: 90%;
+    margin-left: 5%;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+th,td{
+    border: 1px solid;
+    text-align: center;
+    
+}
+
+.tablebelow{
+    position:relative;
+    width:90%;
+    margin-left: 5%;
+    margin-top: 20px;
+    height:30vh;
+    border:1px solid rgb(135, 135, 135)
+}
