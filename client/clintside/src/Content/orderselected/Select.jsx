@@ -7,6 +7,7 @@ import { removeToCart, increaseItems, decreaseItems, emptyitem } from "../../red
 import FinalOrder from '../../finalOrder/FinalOrder';
 const Select = () => {
   const [totalPrice, setTotalPrice] = useState(0)
+  const [table,setTable] = useState(0)
   const [status,setstatus] = useState(false)
   const { carts } = useSelector((state) => state.allCart);
   const dispatch = useDispatch();
@@ -50,16 +51,25 @@ const Select = () => {
   useEffect(() => {
     total()
   }, [total])
+console.log(table)
   return (
     <>
       <div className='selectContainer'>
         <div className='selectinner'>
           <p style={{ fontSize: "20px" }}><button onClick={() => empty()} style={{ marginLeft: "80px", marginBottom: "20px" }}>Empty Cart</button>
+          
             <br />Selected items  <span style={{ marginLeft: "10px" }}> {carts.length}</span><button style={{ marginLeft: "20px", width: "80px" }}><a href="/login" style={{ color: "black", textDecoration: "none" }}>login</a></button></p>
+           <p> Table No.<input onChange={(e)=>
+            {
+              setTable(e.target.value)
+            }
+          
+           } required style={{width:"50px" }} type="number"/></p>
           {carts && carts.map((e, index) => {
             return (
               <>
                 <div className='cartinner'>
+                  
                   <span className='productname'>{e.nameProduct}</span>
                   <br/>
                   <img src={`http://localhost:4000/${e.image}`} />
@@ -85,7 +95,7 @@ const Select = () => {
           Order1(carts)
           setstatus (true)
         }} >Order 
-        {status && <FinalOrder carts={carts} onClose={()=>
+        {status && <FinalOrder carts={carts} table={table} onClose={()=>
           {
             setmodal(false)
           }}/>}

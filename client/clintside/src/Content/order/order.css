@@ -68,116 +68,21 @@
     border-radius: 20px;
     height:5vh
 }
-.orderContainer>.inventry>.maanageProduct{
-    position:relative;
-    width:100%;
-    height:79vh;
-    overflow:auto;
-}
-.orderContainer>.inventry>.maanageProduct>table{
-    position:relative;
-    width:90%;
-    margin-left: 5%;
-    margin-top: 20px;
-    border-collapse: collapse;
-    border-radius: 10px;
-    height:auto;
-    overflow: hidden;
-}
-.orderContainer>.inventry>.maanageProduct>table>.tr1{
-    position:relative;
-    border-radius: 20px;
-    width:130%;
-    color:white;
-    margin-bottom: 30px;
-}
-.orderContainer>.inventry>.maanageProduct>table>.tr1>th{
-    position:relative;
-    width:100%; 
-    height:4vh;
-    background:rgb(248, 183, 62); 
-    margin-left: 3px;
-    border:none;
-    text-align: start;  
-}
-.orderContainer>.inventry>.maanageProduct>table>.tr1>.t1{
-    position:relative;
-    width:20%;
-    text-align: start; 
-    
-}
-.orderContainer>.inventry>.maanageProduct>table>.tr1>.t1>p{
-    position:relative;
-    margin-left: 20px;
-}
-.orderContainer>.inventry>.maanageProduct>table>.tr1>.t2{
-    position:relative;
-    width:20%;
-    text-align: center;  
-}
-.orderContainer>.inventry>.maanageProduct>table>.tr1>.t4{
-    position:relative;
-    width:20%;
-    text-align: center; 
-}
-.orderContainer>.inventry>.maanageProduct>table>.tr1>.t5{
-    position:relative;
-    width:40%;
-    
-    text-align: center; 
-}
-.orderContainer>.inventry>.maanageProduct>table>.tr1>.t3{
-    position:relative;
-    text-align: center; 
-    
-    width:20%;  
-}
-.orderContainer>.inventry>.maanageProduct>table>.tr2{
-    position:relative;
-    width:100%;
-    height:10vh;
-    top: 20px;
-    background:#dddde8 ;
-    text-align: center;
-    border-radius: 10px;  
-}.orderContainer>.inventry>.maanageProduct>table>.tr2>td{
-    position:relative;
-    width:auto;
-    height:4;
-}
-.orderContainer>.inventry>.maanageProduct>table>.tr2>td>p{
-    position:relative;
-    text-align: start;
-    margin-left: 5px;
-    margin-top: -10px;  
-}
-.orderContainer>.inventry>.maanageProduct>table>.tr2>td>.p2{
-    position:relative;
-    text-align: start;
-    margin-left: 10px;
-    margin-top: 10px;  
-}
-.orderContainer>.inventry>.maanageProduct>table>.tr2>td>.p1{
-    position:relative;
-    text-align: start;
-    margin-left: 0px;
-    margin-top: -15px;  
-}
-.orderContainer>.inventry>.maanageProduct>table>.tr2>.editdelete{
-    position:relative;
+.maanageProduct{
+    position: relative;
     display: flex;
-    gap:2px
-   
+    gap:10%;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-.orderContainer>.inventry>.maanageProduct>table>.tr2>.editdelete>p{
-    position:relative;
-    width:40%;
-    border-radius: 5px;
-    cursor: pointer;
-    top: 3.5px;
-    left:-150%;
-    height:5vh;
-    background:white;
-    margin:5px;
+.manageinner{
+    position: relative;
+    width:10%;
+    margin-top: 2%;
+    background-color: #F37028;
+    height:16vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+   text-align: center;
+    border-radius: 20px;
 }
-

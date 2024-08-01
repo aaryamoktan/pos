@@ -2,7 +2,7 @@ import React, { useRef,useState } from 'react'
 import "./print.css"
 
 import { useReactToPrint } from 'react-to-print';
-const PrintInvoinve = ({carts}) => {
+const PrintInvoinve = ({carts,table,totalPrice,place}) => {
     const [data, setdata] = useState(getDate())
 
     const printref = useRef();
@@ -15,7 +15,6 @@ const PrintInvoinve = ({carts}) => {
         const date = today.getDate();
         return `${month}/${date}/${year}`;
     }
-  
         const handlePrint = useReactToPrint({
             content:()=> printref.current,
             
@@ -30,8 +29,8 @@ const PrintInvoinve = ({carts}) => {
                 <p className='h3'> millermr</p>
             </div>
             <div style={{ marginTop: "-20px", paddingLeft: "10px", paddingRight: "10px" }} className='casher'>
-                <p className='h3'>Order Id</p>
-                <p className='h3'>12</p>
+                <p className='h3'>Table no</p>
+                <p className='h3'>{table}</p>
             </div>
             <div style={{ marginTop: "-20px", paddingLeft: "10px", paddingRight: "10px" }} className='casher'>
                 <p className=''>Date</p>
@@ -49,7 +48,6 @@ const PrintInvoinve = ({carts}) => {
 {
     return(
         <>
-        
         <tr>
                     <td>{e.nameProduct} </td>
                     <td>{e.qunty} </td>
@@ -66,20 +64,20 @@ const PrintInvoinve = ({carts}) => {
            
             <div style={{ marginTop: "0", paddingLeft: "10px", paddingRight: "10px" }} className='casher'>
                 <p className='h3'>SubTotal</p>
-                <p className='h3'>12</p>
+                <p className='h3'>{totalPrice}</p>
             </div>
             <div style={{ marginTop: "-20px", paddingLeft: "10px", paddingRight: "10px" }} className='casher'>
                 <p className='h3'>Tax</p>
-                <p className='h3'>12</p>
+                <p className='h3'>{place}%</p>
             </div>
             <div style={{ marginTop: "-20px", paddingLeft: "10px", paddingRight: "10px" }} className='casher'>
                 <p className='h3'>Discount</p>
-                <p className='h3'>12</p>
+                <p className='h3'>2%</p>
             </div>
             <hr style={{borderStyle: "dotted"}} />
             <div className='casher' style={{ paddingLeft: "10px", paddingRight: "10px" }}>
                 <h3 className='h3'>Total Amount</h3>
-                <h3 className='h3'> millermr</h3>
+                <h3 className='h3'>${totalPrice+((totalPrice/100)*place)-((totalPrice/100)*5)} </h3>
             </div>
             <div style={{ marginTop: "-20px", paddingLeft: "10px", paddingRight: "10px" }} className='casher'>
                 <p className='h3'>Cash Payment</p>
