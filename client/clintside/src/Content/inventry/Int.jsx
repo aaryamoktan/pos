@@ -62,21 +62,20 @@ const Int = () => {
 {
   return<>
   <tr className='tr2'>
-  <td><p className='p2'>{e.nameProduct}</p></td>
-    <td><p className='p1'></p>${e.Price}</td>
-    <td><p className='p1'></p>{e.ChooseCategory}</td>
-    <td>{e.image}</td>
-    <td>
-    </td>
-    <td className='editdelete'>
-    <p><Link to={`/admin/inventry/update/${e._id}`}style={{color:"black"}}><FaPen style={{position:"relative",fontSize:"20px",left:"0px",top:"10px"}}/></Link></p>
+  <td style={{border:"none"}}><p className='p2'>{e.nameProduct}</p></td>
+    <td style={{border:"none"}}><p className='p1'></p>${e.Price}</td>
+    <td style={{border:"none"}}><p className='p1'></p>{e.ChooseCategory}</td>
+    <td  style={{border:"none"}}>{e.image}</td>
+    <td className='editdelete' style={{border:"none"}}>
+    <p style={{position:"relative",left:"15%"}}><Link to={`/admin/inventry/update/${e._id}`}style={{color:"black"}}><FaPen style={{position:"relative",fontSize:"20px",left:"30px",top:"10px"}}/></Link></p>
       
 
-    <p  onClick={()=>
+    <p style={{position:"relative",left:"10%"}}  onClick={()=>
     {
       Ddelete(e._id)
-    }}><RiDeleteBin6Line style={{position:"relative",fontSize:"20px",left:"0px",top:"8px",color:"red"}}/></p>
+    }}><RiDeleteBin6Line style={{position:"relative",fontSize:"20px",left:"30px",top:"8px",color:"red"}}/></p>
     </td>
+    
     </tr>
    
   </>

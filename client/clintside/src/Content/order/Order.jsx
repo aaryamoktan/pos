@@ -44,7 +44,7 @@ const Order = ({ carts }) => {
           <div className='iconNotification'><IoIosNotifications style={{ fontSize: "34px", marginLeft: "4px", marginTop: "2px" }} />
           </div> </div>
        
-        <div className='maanageProduct'>
+        <div className='maanage1Product'>
           
             {data && data.map((e) => {
               return <>
