@@ -71,7 +71,7 @@
 .maanageProduct{
     position: relative;
     display: flex;
-    gap:5%;
+    gap:2%;
     justify-content: center;
     flex-wrap: wrap;
 }
