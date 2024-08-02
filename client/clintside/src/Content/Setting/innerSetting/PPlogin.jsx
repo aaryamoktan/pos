@@ -24,7 +24,7 @@ const PPlogin = () => {
                 <img src={img}/>
                 <RiEditCircleLine style={{color:"orange",fontSize:"40px",position:"absolute",top:"120px",left:"180px"}}/>
                 <p>Aarya moktan</p>
-                <p style={{marginTop:"-10px"}}></p>
+                <p style={{marginTop:"-10px"}}>Developer</p>
               </div>
               <div className='pp2'>
                 <ul>
