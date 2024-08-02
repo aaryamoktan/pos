@@ -16,7 +16,8 @@ const PrintInvoinve = ({carts,table,totalPrice,place}) => {
         return `${month}/${date}/${year}`;
     }
         const handlePrint = useReactToPrint({
-            content:()=> printref.current,
+
+            content:()=> printref.current
             
         })
     
@@ -97,7 +98,8 @@ const PrintInvoinve = ({carts,table,totalPrice,place}) => {
             </div>
             </div>
             <h1 style={{fontSize:"10px",marginLeft:"-10px"}}>Thanks for your visit</h1>
-            <button onClick={handlePrint} style={{width:"90%",marginLeft:"5%", height:"4.5vh",background:"#F2712A",border:"none",color:"white",fontSize:"15px"}}>Print invoice</button>
+            <button onClick={handlePrint} 
+             style={{width:"90%",marginLeft:"5%", height:"4.5vh",background:"#F2712A",border:"none",color:"white",fontSize:"15px"}}>Print invoice</button>
         </div>
         </div>
     )
