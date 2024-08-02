@@ -3,6 +3,7 @@ import Leftbar from '../../dashboard/leftbar/Leftbar'
 import "./profile.css"
 import { CiLogout } from "react-icons/ci";
 import { RiEditCircleLine } from "react-icons/ri";
+import img from "./image.png"
 const Profileinfo = () => {
   return (
     <div className='settingContiner'>
@@ -20,10 +21,10 @@ const Profileinfo = () => {
             </div>
             <div className='profile1stContainer'>
               <div className='pp1'>
-                <img src="https://scontent.fktm8-1.fna.fbcdn.net/v/t39.30808-6/451007028_1979726372430621_7055232597399235896_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGI6YgUjrux-fSbp953ghdybcjvtmZCfOltyO-2ZkJ86cBgtjvUApNMfWIAc3HAXr9nU8MWZU2kEPWoP8K3_R0X&_nc_ohc=FVpIK1Emg-EQ7kNvgFOqTU5&_nc_ht=scontent.fktm8-1.fna&oh=00_AYDlcPLkC8UUpeDXqEQxZD2wY3EvyhX_GfOq3zmcNvbR-w&oe=669EC1B3"/>
+                <img src={img} alt="image"/>
                 <RiEditCircleLine style={{color:"orange",fontSize:"40px",position:"absolute",top:"120px",left:"180px"}}/>
                 <p>Aarya moktan</p>
-                <p style={{marginTop:"-10px"}}>Founder</p>
+                <p style={{marginTop:"-10px"}}>Developer</p>
               </div>
               <div className='pp2'>
                 <ul>
