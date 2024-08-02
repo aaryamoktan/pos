@@ -68,16 +68,12 @@ const Int = () => {
     <td  style={{border:"none"}}>{e.image}</td>
     <td className='editdelete' style={{border:"none"}}>
     <p style={{position:"relative",left:"15%"}}><Link to={`/admin/inventry/update/${e._id}`}style={{color:"black"}}><FaPen style={{position:"relative",fontSize:"20px",left:"30px",top:"10px"}}/></Link></p>
-      
-
     <p style={{position:"relative",left:"10%"}}  onClick={()=>
     {
       Ddelete(e._id)
     }}><RiDeleteBin6Line style={{position:"relative",fontSize:"20px",left:"30px",top:"8px",color:"red"}}/></p>
     </td>
-    
     </tr>
-   
   </>
 })}  
 </table>

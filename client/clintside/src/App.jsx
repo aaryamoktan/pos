@@ -20,6 +20,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import TotalREvenue from './Content/total sell/TotalREvenue';
 import TotalSell from './Content/total sell/TotalSell';
 import TotalOrder from './Content/total sell/TotalOrder';
+import OngoingOrder from './Content/order/OngoingOrder';
+import Orderhistory from './Content/order/Orderhistory';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,6 +37,14 @@ const router = createBrowserRouter([
     {
       path: "/admin/order",
       element: <Order />
+    },
+    {
+      path: "/admin/ongoingorder",
+      element: <OngoingOrder />
+    },
+    {
+      path: "/admin/orderHistory",
+      element: <Orderhistory />
     },
     {
       path: "/admin/inventry/update/:id",
