@@ -51,16 +51,17 @@ app.get("/order",async(req,res)=>
 })
 app.post("/order",async(req,res)=>
 {
+    const date =new Date()
     const product = req.body;
+    const day = date.getDay()
     const name = product.order;
     console.log(name)
-  
     name.map(async(ele)=>
 {
         const nameProduct = ele.nameProduct;
         const qunty = ele.qunty;
         const Price=  ele.Price;
-        const namew = new orderModal({nameProduct,qunty,Price});
+        const namew = new orderModal({nameProduct,qunty,Price,day});
         await namew.save();
 })
 })

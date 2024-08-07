@@ -1,4 +1,5 @@
 import Admin from './Content/admin/Admin';
+import "./home/i18n"
 import Home from './home/Home';
 import Layout from './Layout';
 import PPlogin from './Content/Setting/innerSetting/PPlogin';
@@ -22,6 +23,7 @@ import TotalSell from './Content/total sell/TotalSell';
 import TotalOrder from './Content/total sell/TotalOrder';
 import OngoingOrder from './Content/order/OngoingOrder';
 import Orderhistory from './Content/order/Orderhistory';
+import { useTranslation } from 'react-i18next';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -110,6 +112,7 @@ const router = createBrowserRouter([
   }
 ])
 function App() {
+
   return (
     <>
       <Provider store={store}>

@@ -6,8 +6,10 @@ import { IoIosNotifications } from "react-icons/io";
 import { addToCart } from '../redux/cartSlice';
 import  {useDispatch} from 'react-redux'
 import axios from "axios";
+import { useTranslation } from 'react-i18next';
 const Home = () => {
   const [List, setList] = useState();
+  const {i18n} = useTranslation()
   const[category,setcategory] = useState();
   const dispatch = useDispatch()
   const menuitem = [...new Set(List && List.map((ele)=>ele.ChooseCategory))]
@@ -24,9 +26,19 @@ const Home = () => {
   {
     new Audio(all).play()
   }
+  const languages = [
+    {
+      code:"en",lang:"English",
+     
+      
+    },{
+      code:"fr",lang:"French",
+    }
+  ]
 return (
     <>
       <div className='home'>
+        
         <div className='homeRight2'>
           <div className='search'>
             <div className='input'>
@@ -38,10 +50,15 @@ return (
               </div> <select onChange={(
                 ""
               )} style={{position:"relative",height:"3vh",marginTop:"10px"}}>
+              {languages.map((lng)=>
+              {
+                return(
+<option className={lng.code === i18n.language?  "selected":""} value={lng.code}>{lng.lang}</option>
+                )
+                
+              })}
+            
               
-              <option value={"en"}>USA</option>
-              <option value={"hi"}>India</option>
-              <option value={"ru"}>Russia</option>
               </select>
             
           </div>

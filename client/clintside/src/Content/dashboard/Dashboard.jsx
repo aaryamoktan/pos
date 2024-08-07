@@ -5,7 +5,7 @@ import { IoIosNotifications } from "react-icons/io";
 import { LiaSellcast } from "react-icons/lia";
 import { LuCircleDollarSign } from "react-icons/lu";
 import {Chart as Chartjs} from "chart.js/auto"
-import {} from "react-chartjs-2"
+import { Bar,Line,Doughnut } from 'react-chartjs-2';
 import { MdArrowOutward } from "react-icons/md";
 import { MdAddCard } from "react-icons/md";
 import axios from 'axios';
@@ -66,13 +66,37 @@ total()
               <p style={{position:"absolute",fontSize:"27px",top:"40px",left:"30px"}}>$ {totalPrice}</p>
               <div className='uparr2' style={{position:"absolute",width:"50px",top:"55px",height:"50px",left:"180px",borderRadius:"25px"}}><a href="/admin/dashboard/totalrevenue"><MdArrowOutward style={{fontSize:"50px",color:"blue",fontWeight:"100"}}/></a></div>
             </div>
-            <div className='dashinner11'></div>
+            <div className='dashinner11'>
+              
+            </div>
           </div>
           <div className='dashinner2'>
-            <div className='dashinner21'></div>
-            <div className='dashinner22'></div>
+            <div className='dashinner21'>
+              <Bar data={{
+                labels:["Sunday","Monday","Tuesday","Wednesday","thrusday","Friday","Satueday"],
+                datasets:[{
+                 label:"Revenue", 
+                 data:[100,110,300,300,400,900,100]
+                }],
+              }}/>
+            </div>
+            <div className='dashinner22'>
+            <Doughnut data={{
+                labels:["Sunday","Monday","Tuesday","Wednesday","thrusday","Friday","Satueday"],
+                datasets:[{
+                 label:"Revenue", 
+                 data:[100,110,300,300,400,900,100]
+                }],
+              }}/>
+            </div>
             <div className='dashinner23'>
-              <div className='das24'></div>
+              <div className='das24'><Line data={{
+                labels:["Sunday","Monday","Tuesday","Wednesday","thrusday","Friday","Satueday"],
+                datasets:[{
+                 label:"Revenue", 
+                 data:[100,110,300,300,400,900,100]
+                }],
+              }}/></div>
               <div className='das24'></div>
             </div>
           </div><h1>Trending Dishes</h1>
