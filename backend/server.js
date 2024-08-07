@@ -73,6 +73,7 @@ app.post("/login",async(req,res)=>
             {
                 if(check.position === "Manager"){
                     res.status(200).json("manager")
+                    
                 }
                 else if(check.position === "Casiher"){
                     res.status(200).json("Casiher")
