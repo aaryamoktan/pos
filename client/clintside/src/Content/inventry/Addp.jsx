@@ -10,7 +10,7 @@ const Addp = ({onClose}) => {
     const nevigate = useNavigate()
     const submit= (e)=>
     {
-        e.preventDefault();
+       
         var qty = 0
         const formdata = new FormData();
         formdata.append("image",image);

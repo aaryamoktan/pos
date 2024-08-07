@@ -29,8 +29,9 @@ app.get("/getdata",(req,res)=>
 app.post("/tax",async(req,res)=>
 {
    try{
-    const tax = req.body;
-    const newtax =new usertax({tax})
+    const tax1 = req.body.tax1;
+    const tax2 =req.body.tax;
+    const newtax =new usertax({tax1,tax2})
     await newtax.save();
    }
    catch(err)
@@ -53,7 +54,7 @@ app.post("/order",async(req,res)=>
     const product = req.body;
     const name = product.order;
     console.log(name)
-    console.log(id)
+  
     name.map(async(ele)=>
 {
         const nameProduct = ele.nameProduct;
