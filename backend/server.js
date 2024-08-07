@@ -9,6 +9,7 @@ const dotenv = require("dotenv")
 const mongoose = require("mongoose")
 const router = require("./route")
 const multer = require("multer")
+const bcrypt = require("bcrypt")
 const stripe = require("stripe")("sk_test_51P4DgDSCpBUS8op6msy0WLu6gzqvILV4MYVD3Zlr7fxMd1jHzwI8wsS2LqXuf9EvioF3p37Oe473UHJaRaFzOW0V00DOUAPRUR")
 const app = express();
 const upload = multer({ dest: 'uploads/' })
@@ -59,13 +60,51 @@ app.post("/order", async (req, res) => {
         await namew.save();
     })
 })
+app.post("/login",async(req,res)=>
+{
+    const name = req.body.name;
+    const password = req.body.password;
+    try{
+        const check = await empD.findOne({name:name})
+       
+        if(check){
+          
+            if(check.password === password)
+            {
+                if(check.position === "Manager"){
+                    res.status(200).json("manager")
+                }
+                else if(check.position === "Casiher"){
+                    res.status(200).json("Casiher")
+                }
+                else if(check.position === "Weiter"){
+                    res.status(200).json("Weiter")
+                }
+                else if(check.position === "Ceif"){
+                    res.status(200).json("Ceif")
+                }
+            }
+            else{
+                res.json("fail")
+            }
+        }
+    }
+    catch(err)
+    {
+        console.log(err)
+    }
+
+})
 app.post("/regist", async (req, res) => {
     try {
+        const  saltround = 10;
         const name = req.body.name;
         const number = req.body.number;
         const position = req.body.position;
         const age = req.body.age;
-        const savedetail = new empD({ name, number, position, age });
+        const password = req.body.password;
+       const hastpass =  await bcrypt.hash(password,saltround)
+        const savedetail = new empD({ name, number, position, age,password});
         await savedetail.save();
     }
     catch (err) {

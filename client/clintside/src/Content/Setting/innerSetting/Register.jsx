@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import Leftbar from '../../dashboard/leftbar/Leftbar'
-import axios from 'axios'
 import "./regis.css"
 const Register = () => {
   const [name,setName]= useState()
   const [age,setAge] = useState()
   const [number,setNumber]=useState();
   const [position,setPosition] = useState();
+  const [password,setPassword] = useState();
   const regist=async(e)=>
   {
     e.preventDefault();
@@ -14,7 +14,7 @@ const Register = () => {
       fetch("http://localhost:4000/regist",{
         method:"POST",
         headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({name,age,number,position})
+        body:JSON.stringify({name,age,number,position,password})
       })
       window.location.reload();
       alert("registration Sucessfully")
@@ -41,11 +41,16 @@ const Register = () => {
               <h2>Registration Form</h2>
               <form>
                 
-               <input placeholder='Name' type="text" onChange={(e)=>
+               <input placeholder='userId' type="emailid" onChange={(e)=>
                 {
                   setName(e.target.value)
                 }
                } name="name"/>
+                <input placeholder='Password' type="password" onChange={(e)=>
+                {
+                  setPassword(e.target.value)
+                }
+               } name="password"/>
                <br/>
                <input placeholder='Number' type="number" onChange={(e)=>
                 {
