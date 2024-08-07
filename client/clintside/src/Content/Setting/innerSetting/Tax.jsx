@@ -1,7 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Leftbar from '../../dashboard/leftbar/Leftbar'
 import "./tax.css"
 const Tax = () => {
+  const [tax1,setTax1] = useState();
+  const [tax2,setTax2] = useState();
+  const onSubmit = async()=>
+  {
+    try{
+
+    }
+    catch(err)
+    {
+      console.log(err)
+    }
+  }
   return (
     <div className='settingContiner'>
     <Leftbar/>
@@ -20,13 +32,21 @@ const Tax = () => {
             <h1>Include Tax</h1>
             <label style={{marginTop:"20px"}}>Dine In Tax(%)</label>
             <br/>
-            <input type="text"/>
+            <input onChange={(e)=>
+              {
+                setTax1(e.target.value)
+              }
+            } type="number"/>
             <br/>
             <label>TakeAway Tax(%)</label>
             <br/>
-            <input type="text"/>
+            <input  onChange={(e)=>
+              {
+                setTax2(e.target.value)
+              }
+            } type="number"/>
             <br/>
-            <button>Save Changes</button>
+            <button onClick={onSubmit}>Save Changes</button>
             
           </div>
   </div>

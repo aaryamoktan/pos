@@ -26,7 +26,18 @@ app.get("/getdata",(req,res)=>
     .then(user=>res.json(user))
     .catch(err=>res.json(err))
 });
-
+app.post("/tax",async(req,res)=>
+{
+   try{
+    const tax = req.body;
+    const newtax =new usertax({tax})
+    await newtax.save();
+   }
+   catch(err)
+   {
+    console.log(err)
+   }
+})
 app.post("/checkout",async(req,res)=>
 {
     const product = req.body;
@@ -42,14 +53,13 @@ app.post("/order",async(req,res)=>
     const product = req.body;
     const name = product.order;
     console.log(name)
-    let id = Math.floor((Math.random() * 5) + 1);
     console.log(id)
     name.map(async(ele)=>
 {
         const nameProduct = ele.nameProduct;
         const qunty = ele.qunty;
         const Price=  ele.Price;
-        const namew = new orderModal({nameProduct,qunty,Price,id});
+        const namew = new orderModal({nameProduct,qunty,Price});
         await namew.save();
 })
 })
