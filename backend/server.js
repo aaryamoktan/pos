@@ -1,9 +1,10 @@
 const express = require("express");
 const cors = require("cors");
-const orderModal=  require("./order")
+const orderModal = require("./order")
+const empD = require("./employee")
 const usertax = require("./tax")
-const usermodal  =require("./modal")
-const userdetails  = require("./userDetail");
+const usermodal = require("./modal")
+const userdetails = require("./userDetail");
 const dotenv = require("dotenv")
 const mongoose = require("mongoose")
 const router = require("./route")
@@ -14,147 +15,140 @@ const upload = multer({ dest: 'uploads/' })
 app.use(cors());
 app.use(express.json())
 dotenv.config();
-app.use("/uploads",express.static('uploads'))
+app.use("/uploads", express.static('uploads'))
 const name = mongoose.connect(process.env.URL);
-if(name){
+if (name) {
     console.log("connected")
 }
-app.use("/",router);
-app.get("/getdata",(req,res)=>
-{
+app.use("/", router);
+app.get("/getdata", (req, res) => {
     usermodal.find({})
-    .then(user=>res.json(user))
-    .catch(err=>res.json(err))
+        .then(user => res.json(user))
+        .catch(err => res.json(err))
 });
-app.post("/tax",async(req,res)=>
-{
-   try{
-    const tax1 = req.body.tax1;
-    const tax2 =req.body.tax;
-    const newtax =new usertax({tax1,tax2})
-    await newtax.save();
-   }
-   catch(err)
-   {
-    console.log(err)
-   }
+app.post("/tax", async (req, res) => {
+    try {
+        const tax1 = req.body.tax1;
+        const tax2 = req.body.tax;
+        const newtax = new usertax({ tax1, tax2 })
+        await newtax.save();
+    }
+    catch (err) {
+        console.log(err)
+    }
 })
-app.post("/checkout",async(req,res)=>
-{
+app.post("/checkout", async (req, res) => {
     const product = req.body;
 })
-app.get("/order",async(req,res)=>
-{
+app.get("/order", async (req, res) => {
     orderModal.find({})
-    .then(user=>res.json(user))
-    .catch(err=>res.json(err))
+        .then(user => res.json(user))
+        .catch(err => res.json(err))
 })
-app.post("/order",async(req,res)=>
-{
-    const date =new Date()
+app.post("/order", async (req, res) => {
+    const date = new Date()
     const product = req.body;
     const day = date.getDay()
     const name = product.order;
     console.log(name)
-    name.map(async(ele)=>
-{
+    name.map(async (ele) => {
         const nameProduct = ele.nameProduct;
         const qunty = ele.qunty;
-        const Price=  ele.Price;
-        const namew = new orderModal({nameProduct,qunty,Price,day});
+        const Price = ele.Price;
+        const namew = new orderModal({ nameProduct, qunty, Price, day });
         await namew.save();
+    })
 })
+app.post("/regist", async (req, res) => {
+    try {
+        const name = req.body.name;
+        const number = req.body.number;
+        const position = req.body.position;
+        const age = req.body.age;
+        const savedetail = new empD({ name, number, position, age });
+        await savedetail.save();
+    }
+    catch (err) {
+        console.log(err)
+    }
 })
-app.post("/userlogin",async(req,res)=>
-{
-    const {Email,password} = req.body;
-    try{
-        const check = await userdetails.findOne({email:Email})
-        if(check)
-        {
-            if(password === check.password)
-            {
+app.post("/userlogin", async (req, res) => {
+    const { Email, password } = req.body;
+    try {
+        const check = await userdetails.findOne({ email: Email })
+        if (check) {
+            if (password === check.password) {
                 console.log(check._id);
-                res.json({message:"match",id:check._id})
+                res.json({ message: "match", id: check._id })
             }
-            else{
+            else {
                 res.json("notmatch")
             }
         }
-        else{
+        else {
             console.log(err);
         }
     }
-    catch(err)
-    {
+    catch (err) {
         console.log(err)
     }
 })
-app.get("/update/:id",(req,res)=>
-{
+app.get("/update/:id", (req, res) => {
     const id = req.params.id;
     console.log(id)
-    usermodal.findById({_id:id})
-    .then(user=>res.json(user))
-    .catch(err=>res.json(err))
+    usermodal.findById({ _id: id })
+        .then(user => res.json(user))
+        .catch(err => res.json(err))
 })
-app.get("/userdetails/:id",async(req,res)=>
-{
-    try{
+app.get("/userdetails/:id", async (req, res) => {
+    try {
         const i = req.params.id;
         console.log(i)
     }
-    catch(err)
-    {
+    catch (err) {
         console.log(err)
     }
-}  
+}
 )
-app.get("/createuser",(req,res)=>
-{
+app.get("/createuser", (req, res) => {
     res.end("hellow")
 })
-app.post("/createuser", upload.single('image'),async(req,res)=>
-{    
+app.post("/createuser", upload.single('image'), async (req, res) => {
     const nameProduct = req.body.nameProduct;
     const Price = req.body.Price;
     const ChooseCategory = req.body.ChooseCategory;
     const image = req.file.path;
     const qunty = 0
-    const newServerice = new usermodal({nameProduct,Price,ChooseCategory,image,qunty});
+    const newServerice = new usermodal({ nameProduct, Price, ChooseCategory, image, qunty });
     await newServerice.save();
 })
-app.delete("/deleteint/:id",async(req,res)=>
-{
-    try{
-    const id=req.params.id;
-    console.log(id)
-    await usermodal.findByIdAndDelete({_id:id})
+app.delete("/deleteint/:id", async (req, res) => {
+    try {
+        const id = req.params.id;
+        console.log(id)
+        await usermodal.findByIdAndDelete({ _id: id })
     }
-    catch(err)
-    {
+    catch (err) {
         console.log(err)
     }
 })
-app.put("/update/:id",async(req,res)=>
-{
-    try{
+app.put("/update/:id", async (req, res) => {
+    try {
         const nameProduct = req.body.nameProduct;
         const ChooseCategory = req.body.ChooseCategory;
         const Price = req.body.Price
         console.log(Price)
         const id = req.params.id;
         console.log(id)
-        await usermodal.findByIdAndUpdate( {_id:id},{nameProduct,ChooseCategory,Price})
-        .then(user=>res.json(user))
-        .catch(err=>res.json({err}))
+        await usermodal.findByIdAndUpdate({ _id: id }, { nameProduct, ChooseCategory, Price })
+            .then(user => res.json(user))
+            .catch(err => res.json({ err }))
     }
-    catch(err){
+    catch (err) {
         console.log(err)
     }
 })
 const PORT = process.env.PORT
-app.listen(PORT,(req,res)=>
-{
+app.listen(PORT, (req, res) => {
     console.log(`post number ${PORT}`)
 })

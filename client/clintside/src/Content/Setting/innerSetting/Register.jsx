@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Leftbar from '../../dashboard/leftbar/Leftbar'
+import axios from 'axios'
 import "./regis.css"
 const Register = () => {
   const [name,setName]= useState()
@@ -10,7 +11,13 @@ const Register = () => {
   {
     e.preventDefault();
     try{
-
+      fetch("http://localhost:4000/regist",{
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({name,age,number,position})
+      })
+      window.location.reload();
+      alert("registration Sucessfully")
     }
     catch(err)
     {
