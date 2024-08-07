@@ -1,13 +1,18 @@
 import React, { useState } from 'react'
 import Leftbar from '../../dashboard/leftbar/Leftbar'
 import "./tax.css"
+import axios from 'axios';
 const Tax = () => {
   const [tax1,setTax1] = useState();
   const [tax2,setTax2] = useState();
   const onSubmit = async()=>
   {
+    e.preventDefault();
     try{
-
+      axios.post("http://localhost:4000/tax",{tax1,tax2})
+      .then(result=>console.log(result))
+    .catch(err=>console.log(err))
+    Navigation("/admin/inventry")
     }
     catch(err)
     {
@@ -46,7 +51,7 @@ const Tax = () => {
               }
             } type="number"/>
             <br/>
-            <button onClick={onSubmit}>Save Changes</button>
+            <button style={{cursor:"pointer"}} onClick={onSubmit}>Save Changes</button>
             
           </div>
   </div>
