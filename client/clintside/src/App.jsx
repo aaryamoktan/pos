@@ -1,5 +1,6 @@
 import Admin from './Content/admin/Admin';
 import "./home/i18n"
+import Cook from './Content/Cook/Cook';
 import Home from './home/Home';
 import Layout from './Layout';
 import PPlogin from './Content/Setting/innerSetting/PPlogin';
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
     {
       path: "/admin/order",
       element: <Order />
+    },
+    {
+      path:"/cook",
+      element:<Cook/>
     },
     {
       path: "/admin/ongoingorder",

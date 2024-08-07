@@ -22,7 +22,7 @@ const Login = () => {
           navigation("/")
         }
         if (result.data === "Ceif") {
-          navigation("/admin")
+          navigation("/cook")
         }
       })
 

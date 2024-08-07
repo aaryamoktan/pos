@@ -1,0 +1,19 @@
+.cooksef{
+    position:relative;
+    width:99%;
+    height:100vh;
+    background:rgb(164, 163, 163);
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.cooksef>.cookinner{
+    position:relative;
+    width:10%;
+    text-align: center;
+    border-radius: 20px;
+    height:23vh;
+    margin:10px;
+    background:rgb(165, 216, 160);
+}
