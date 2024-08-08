@@ -10,7 +10,7 @@ const Cook = () => {
         axios.post("http://localhost:4000/orerHstory",{name,price,total})
         axios.delete(`http://localhost:4000/deleteorder/`+id)
         .then((result)=>console.log(result))
-        .catch((err)=>console.log(err))
+        .catch((err)=>console.log(err));
       }
     useEffect(() => {
       axios.get("http://localhost:4000/order")
