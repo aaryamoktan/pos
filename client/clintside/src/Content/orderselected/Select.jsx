@@ -12,6 +12,7 @@ const Select = () => {
   const { carts } = useSelector((state) => state.allCart);
   const dispatch = useDispatch();
   const Order1 = async (e) => { 
+  e.preventDefault();
     try {
       const body = {
         order: carts

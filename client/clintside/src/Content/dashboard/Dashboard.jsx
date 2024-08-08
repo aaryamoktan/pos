@@ -16,7 +16,7 @@ const Dashboard = () => {
   const [length,setLength] = useState();
   useEffect(()=>
 {
-  axios.get("http://localhost:4000/order")
+  axios.get("http://localhost:4000/orderHistory")
   .then(result=>{console.log(result)
     setLength(result.data.length)
   setdata(result.data)

@@ -47,12 +47,12 @@ app.get("/order", async (req, res) => {
         .then(user => res.json(user))
         .catch(err => res.json(err))
 })
-app.get("/orderHistory",async(req,res)=>
-{
-    orderModalhis.find({})
-    .then(user=>res.json(user))
-    .catch(err=>console.log(err))
-})
+app.get("/orderHistory",(req,res)=>
+    {
+        orderModalhis.find({})
+        .then(user=>res.json(user))
+        .catch(err=>console.log(err))
+    })
 app.post("/order", async (req, res) => {
     const date = new Date()
     const product = req.body;
