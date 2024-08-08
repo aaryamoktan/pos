@@ -5,10 +5,17 @@ import "./cook.css"
 const Cook = () => {
     const [data, setdata] = useState()
     const [lenght, setlength] = useState(0)
+    const hellow= (id,name,price,total)=>
+      {
+        axios.post("http://localhost:4000/",{name,price,total})
+        axios.delete(`http://localhost:4000/deleteorder/`+id)
+        .then((result)=>console.log(result))
+        .catch((err)=>console.log(err))
+      }
     useEffect(() => {
       axios.get("http://localhost:4000/order")
         .then(result => {
-          console.log(result)
+          
           setlength(result.data.length)
           setdata(result.data)
         })
@@ -22,7 +29,7 @@ const Cook = () => {
                   <h3 >{e.nameProduct}</h3>
                 <p> quanaty:{e.qunty}</p>
                 <p>${e.Price}</p>
-                <button>Done</button>
+                <button onClick={()=>{hellow(e._id,e.nameProduct,e.qunty,e.price)}}>Done</button>
                 </div>
               </>
             })}  

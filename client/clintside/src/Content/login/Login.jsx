@@ -25,6 +25,9 @@ const Login = () => {
           navigation("/cook")
         }
       })
+      .catch((err)=>{
+        console.log(err)
+      })
 
   }
 

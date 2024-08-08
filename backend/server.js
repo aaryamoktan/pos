@@ -56,10 +56,22 @@ app.post("/order", async (req, res) => {
         const nameProduct = ele.nameProduct;
         const qunty = ele.qunty;
         const Price = ele.Price;
-        const namew = new orderModal({ nameProduct, qunty, Price, day });
+        const namew = new orderModal({ nameProduct, qunty, Price });
         await namew.save();
     })
 })
+
+app.delete("/deleteorder/:id",async(req,res)=>
+    {
+        try{
+            const id = req.params.id
+            await orderModal.findByIdAndDelete({_id:id})
+        }
+        catch(err)
+        {
+            console.log(err)
+        }   
+    })
 app.post("/login",async(req,res)=>
 {
     const name = req.body.name;
@@ -68,7 +80,6 @@ app.post("/login",async(req,res)=>
         const check = await empD.findOne({name:name})
        
         if(check){
-          
             if(check.password === password)
             {
                 if(check.position === "Manager"){
