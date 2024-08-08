@@ -72,6 +72,10 @@ app.delete("/deleteorder/:id",async(req,res)=>
             console.log(err)
         }   
     })
+    app.post("/orerHstory",(req,res)=>{
+        const {name,price,total} = req.body;
+        console.log(name,price,total)
+    })
 app.post("/login",async(req,res)=>
 {
     const name = req.body.name;
