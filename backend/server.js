@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const orderModalhis = require("./orderHistory")
 const orderModal = require("./order")
 const empD = require("./employee")
 const usertax = require("./tax")
@@ -46,6 +47,12 @@ app.get("/order", async (req, res) => {
         .then(user => res.json(user))
         .catch(err => res.json(err))
 })
+app.get("/orderHistory",async(req,res)=>
+{
+    orderModalhis.find({})
+    .then(user=>res.json(user))
+    .catch(err=>console.log(err))
+})
 app.post("/order", async (req, res) => {
     const date = new Date()
     const product = req.body;
@@ -72,9 +79,18 @@ app.delete("/deleteorder/:id",async(req,res)=>
             console.log(err)
         }   
     })
-    app.post("/orerHstory",(req,res)=>{
-        const {name,price,total} = req.body;
-        console.log(name,price,total)
+   
+    app.post("/orerHstory",async(req,res)=>{
+        try{
+            const {name,price,total} = req.body;
+        const newhis = new orderModalhis({nameProduct:name,Price:price,qunty:total})
+        await newhis.save();
+        }
+        catch(err)
+        {
+            console.log(err)
+        }
+        
     })
 app.post("/login",async(req,res)=>
 {

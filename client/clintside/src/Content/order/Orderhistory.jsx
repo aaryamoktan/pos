@@ -7,7 +7,7 @@ const Orderhistory = () => {
   const [data, setdata] = useState()
   const [lenght, setlength] = useState(0)
   useEffect(() => {
-    axios.get("http://localhost:4000/order")
+    axios.get("http://localhost:4000/orderHistory")
       .then(result => {
         console.log(result)
         setlength(result.data.length)
